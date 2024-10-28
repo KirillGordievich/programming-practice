@@ -30,13 +30,13 @@ def generate_brackets_circle(n: int):
             result.append(current)
             continue
 
-        if open_left < n:
-            stack.append((current + "(", open_left + 1, close_right))
-
         if close_right < open_left:
             stack.append((current + ")", open_left, close_right + 1))
 
-    return result[::-1]
+        if open_left < n:
+            stack.append((current + "(", open_left + 1, close_right))
+
+    return result
 
 
 def main():
