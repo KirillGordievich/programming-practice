@@ -31,17 +31,22 @@ b = [6, 4, 2, 5]
 
 b.sort()
 
-first_miss = None
+first_miss = second_miss = None
 
 for index, item in enumerate(a):
-    if item != b[index]:
-        first_miss = item
-        # мы можем также найти второе число
-        break
+    if item != b[index if first_miss is None else index - 1]:
+        if not first_miss:
+            first_miss = item
+        else:
+            second_miss = item
+            break
+        # first_miss = item
+        # # мы можем также найти второе число
+        # break
 
-a_sum = sum(a)
-b_sum = sum(b) + first_miss
-second_miss = a_sum - b_sum
+# a_sum = sum(a)
+# b_sum = sum(b) + first_miss
+# second_miss = a_sum - b_sum
 
 
 print(f"Two missed: {first_miss}, {second_miss}")
