@@ -83,13 +83,10 @@ llist.append(9)
 llist.print()
 
 llist.pop()
-
 llist.print()
 
 llist.pop()
-
 llist.print()
 
 llist.pop()
-
 llist.print()
