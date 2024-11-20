@@ -17,6 +17,7 @@ class BaseClass(metaclass=Singleton):
     def __init__(self):
         print(f"Initializing {type(self).__name__}")
 
+
 a = BaseClass()
 b = BaseClass()
 
