@@ -19,4 +19,10 @@ func main() {
 	// Также можно применять сокращенное определение переменной массива:
 	numbers3 := [...]int{4, 4, 1, 2, 0} // длина массива 5
 	fmt.Println(numbers3)               // [1 2 3]
+
+	for i, v := range numbers3 {
+		fmt.Println(i, v)
+	}
+
+	fmt.Println(len(numbers))
 }
