@@ -8,7 +8,7 @@ class MyClass:
         if cls._instance:
             return cls._instance
         if not cls._instance:
-            cls._instance = super(MyClass, cls).__new__(cls)
+            cls._instance = super().__new__(cls)
 
         return cls._instance
 
