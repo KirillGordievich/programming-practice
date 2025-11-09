@@ -6,10 +6,10 @@ def summ(a, b):
     return a + b
 
 
-def multiply(mulptilpyer: int):
+def multiply(multiplier: int):
     def decorator(func):
         def newfunc(*args, **kwargs):
-            return mulptilpyer * func(*args, **kwargs)
+            return multiplier * func(*args, **kwargs)
 
         return newfunc
 
