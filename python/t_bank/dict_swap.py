@@ -5,13 +5,6 @@
 """
 
 
-class A:
-    def __init__(self, id):
-        self.id = id
-
-    def __hash__(self):
-        return 1
-
 def swap_keys_values(d: dict) -> dict:
     new_dict = {}
     for k, v in d.items():
@@ -23,14 +16,3 @@ def swap_keys_values(d: dict) -> dict:
     return new_dict
 
     # return { v: k for k, v in d.items()}
-
-
-a = A(1)
-a1 = A(1)
-print({a: 1, a1: 2})    # Чтобы объект
-print(hash(a))  # 1
-print(hash(a1))  # 1
-
-print(a == a1)  # False
-
-# {1: (1, [2])}
