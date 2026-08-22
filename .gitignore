@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .idea/
+*.o
+pascal/*
+!pascal/*.pas
