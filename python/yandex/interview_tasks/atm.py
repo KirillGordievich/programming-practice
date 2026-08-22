@@ -65,7 +65,7 @@ class ATM:
         for banknote in self._banknotes[::-1]:
             if banknote > amount_to_fill:
                 continue
-            banknote_count_need = amount_requested // banknote
+            banknote_count_need = amount_to_fill // banknote
             print(f"{banknote} banknote_count_need: {banknote_count_need}")
             if not banknote_count_need:
                 continue
